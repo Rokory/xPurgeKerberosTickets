@@ -1,0 +1,8 @@
+
+[ClassVersion("0.1.0.0"), FriendlyName("xPurgeKerberosTickets")]
+class EO_xPurgeKerberosTickets : OMI_BaseResource
+{
+    [Key, Description("Unique key to identify the resource. This parameter is not used for anything else.")] String Key;
+    [Write, Description("Indicates whether the Kerberos tickets for the user or the computer account should be purged."), ValueMap{"Computer","User"}, Values{"Computer","User"}] String Target;
+};
+
