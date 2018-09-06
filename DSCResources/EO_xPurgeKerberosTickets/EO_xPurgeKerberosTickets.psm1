@@ -33,12 +33,12 @@ function Set-TargetResource
 
     if ($Target -eq 'Computer') {
         Write-Verbose 'Calling klist.exe -li 0x3e7 purge'
-        "$env:windir\System32\klist.exe -li 0x3e7 purge"
+        & 'klist.exe' -li 0x3e7 purge
     }
 
     if ($Target -eq 'User') {
         Write-Verbose 'Calling klist.exe purge'
-        "$env:windir\System32\klist.exe purge"
+        & 'klist.exe' purge
     }
 }
 
